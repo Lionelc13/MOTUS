@@ -1,0 +1,15 @@
+{
+    "name": "lione/motus",
+    "autoload": {
+        "psr-4": {
+            "Motus\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lionelc13",
+            "email": "lionelc.13@gmail.com"
+        }
+    ],
+    "require": {}
+}

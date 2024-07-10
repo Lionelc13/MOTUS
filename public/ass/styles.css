@@ -1,0 +1,195 @@
+* {
+    margin: auto;
+    
+}
+
+ body{
+    background-color: rgb(0, 157, 255) !important;
+}
+
+h1 {
+    color: orangered !important;
+    text-align: center;
+    margin-top: 100px;
+    font-weight: 600 !important;
+}
+
+h2 {
+    color: white !important;
+    text-align: left;
+    margin-left: 100px;
+}
+
+header {
+    background-color: blue;
+
+}
+
+.grille:table {
+    display:flexbox;
+    border-collapse: separate;
+    background-color: blue;
+    border: 2px solid black;
+}
+
+.tableau-classement th {
+    display:flexbox;
+    border-collapse: separate;
+    background-color: rgb(255, 115, 0);
+    border: 5px solid black !important;
+    text-align: center;
+    color:black;
+}
+
+
+
+.tableau-classement tr,
+.tableau-classement td {
+    border: 5px solid black !important;
+    background-color: rgba(12, 12, 236, 0.5);;
+    width: 200px;
+    text-align: center;
+    color: white;
+}
+
+th,
+tr,
+td {
+    border: 5px solid white !important;
+    width: 40px;
+    height:40px;
+    font-size: x-large; 
+    margin: 5px;
+    text-transform: uppercase;
+}
+
+
+.affichage {
+    width:50%;
+    height: 100vh;
+    background-color: white;
+    align-items: center;
+    position: relative;
+    margin-top: 50px;
+    background-image: url(../fond-motus.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+ /* .aucun, voir .Ok */
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+.btn-level {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    height: 50px;
+    background-color: white;
+    font-weight: bold;
+    
+}
+
+.score {
+    text-align: center;
+    text-justify:auto;
+}
+
+.boule {
+    display: flex;
+    height: 50px;;
+    width: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    font-size: large;
+    text-align: center;
+}
+
+.btnNouveau {
+    height: 50px;
+    display: flex;
+     margin:0 auto 0 auto !important;
+    justify-content: center !important;
+}
+
+.level {
+    height: 30px !important;
+}
+
+.champs-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.Erreur {
+    background-color: orange;
+    text-align: center;
+    color: white; 
+    border-radius: 50%;
+    
+}
+
+.grille {
+    margin-top: 10%;
+}
+
+.inscription {
+    background-color:rgb(65, 170, 199);
+    display: flex;
+    flex-direction: column;
+    /* padding: auto calc((100vw-1200)/2); */
+    margin: auto;
+    width: 45%;
+    margin-bottom: 0; 
+    margin-top: 10px;  
+}
+
+.menuGrille {
+    display: block;
+    position: relative;
+
+}
+
+.label-formulaire {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.No,
+.Aucun {
+    background-color: blue;
+    text-align: center;
+    color: white;  
+}
+
+.Ok{
+    background-color: red;
+    text-align: center;
+    color: white;  
+}
+
+@media screen and (max-width: 767px) {
+    .affichage {
+        width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .affichage {
+        width: 90%;
+    }
+    body {
+        background-image: url(../fond-motus.jpg);
+        background-size:contain; 
+    }
+  }
