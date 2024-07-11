@@ -21,10 +21,9 @@ class DaoAppli
         $dbName = $config['db_name'];
         $dbUser = $config['db_user'];
         $dbPass = $config['db_pass'];
-
         if (!isset($this->db)) {
             try {
-                $this->db = new PDO("mysql:host=" . $dbHost . ";charset=utf8;dbname=" . $dbName, $dbUser, $dbPass);
+                $this->db = new PDO("mysql:host=" . $dbHost . ";charset=utf8;dbname=" . $dbName, $dbUser, $dbPass,);
                 $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             } catch (\PDOException $e) {
                 $monErreur = $this::retourneErreur($e->getCode(), $e->getMessage());
