@@ -120,9 +120,9 @@ class CntrlAppli{
         require 'src/view/jouer.php';
     }
 
-    public function listerMots($level) {
+    public function listerMots($level, $user) {
         $liste = new ListeMots($level);
-        $json = json_encode($liste->getListeMots());
+        $json = json_encode($liste->getListeMots($user));
         echo $json;
         return $json;
     }

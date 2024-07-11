@@ -16,8 +16,9 @@ public function __construct(?string $word =null)
     {
         $this->word = $word;
         $dao = new DaoAppli();
-        $dao->listerMots($this->word);
         $user = $_SESSION['id_user'];
+        $dao->listerMots($this->word,$user);
+        
         return $this->countWords($user);
     }
 

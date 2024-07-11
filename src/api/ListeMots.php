@@ -11,9 +11,9 @@ function __construct(?int $level)
     $this->level = $level;
 }
 
-public function getListeMots(){
+public function getListeMots($user){
     $dao = new DaoAppli();
 
-    return $dao->ListerMots($this->level);
+    return $dao->ListerMots($this->level, $user);
     }
 }

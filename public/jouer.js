@@ -45,7 +45,7 @@ const vm = createApp({
         },
         chargerListeMots() {
             axios
-                .get("/api/liste?level=" + this.level)
+                .get("/api/liste?level=" + this.level + "&user=" + this.userid)
                 .then((res) => {
                     this.essai = 0;
                     this.motATrouver = res.data[(Math.floor(Math.random() * res.data.length))].name_word;

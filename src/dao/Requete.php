@@ -32,6 +32,8 @@ class Requete
                               FROM word 
                               WHERE id_level=?';
 
+    public const LIST_WORD_DISTINCT = 'SELECT name_word FROM word W WHERE id_level=? AND W.id_word not in (select id_word from chercher WHERE id_user=?)';
+
     public const UPD_CON_USER = 'UPDATE user
                                  SET password=?,
                                  email=?

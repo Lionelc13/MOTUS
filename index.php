@@ -36,7 +36,8 @@ if ($method == 'get' and $route == '/inscription') {
     $cntrl->getClassement();
 } elseif ($method == 'get' && $route == '/api/liste') {
     $level = $_GET['level'];
-    $cntrl->listerMots($level);
+    $user = $_GET['user'];
+    $cntrl->listerMots($level, $user);
 } elseif ($method == 'get' && $route == '/api/enregistrer') {
     $word = $_GET['word'];
     $user = $_GET['user'];

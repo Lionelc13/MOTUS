@@ -100,11 +100,12 @@ class DaoAppli
         }
     }
 
-    public function listerMots($level)
+    public function listerMots($level, $user)
     {
-        $requete = Requete::LIST_WORD;
+        $requete = Requete::LIST_WORD_DISTINCT;
         $statement = $this->db->prepare($requete);
         $statement->bindValue(1, $level, PDO::PARAM_INT);
+        $statement->bindValue(2, $user, PDO::PARAM_STR);
         $statement->execute();
         $datas = $statement->fetchAll();
 
