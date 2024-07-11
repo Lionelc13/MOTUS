@@ -15,15 +15,16 @@ class DaoAppli
     // On essai de se connecter à la base de données
     private function getConnection()
     {
-        $host = "localhost";
-        $db_name = "motus";
-        $username = "root";
-        $password = "toto";
+        $config = require __DIR__ . '/config.php';
+
+        $dbHost = $config['db_host'];
+        $dbName = $config['db_name'];
+        $dbUser = $config['db_user'];
+        $dbPass = $config['db_pass'];
 
         if (!isset($this->db)) {
             try {
-                // $db = new PDO('mysql:host=127.0.0.1;charset=utf8;dbname=testdomi','muller','codapppw');
-                $this->db = new PDO("mysql:host=" . $host . ";charset=utf8;dbname=" . $db_name, $username, $password);
+                $this->db = new PDO("mysql:host=" . $dbHost . ";charset=utf8;dbname=" . $dbName, $dbUser, $dbPass);
                 $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             } catch (\PDOException $e) {
                 $monErreur = $this::retourneErreur($e->getCode(), $e->getMessage());

@@ -24,4 +24,4 @@ Thumbs.db
 /vendor/
 
 /# Ignorer les fichiers d'environnement
-.env
+config.php
